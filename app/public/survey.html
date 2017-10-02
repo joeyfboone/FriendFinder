@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <style>
+        #mainData {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: right center;
+        }
+        h1 {
+            color: #527bff;
+        }
+        h3 {
+            color: #616060;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .red {
+            color: red;
+        }
+        input[type=text] {
+            width: 300px;
+        }
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <title>Friend Compatibility Quiz</title>
+</head>
+
+<body>
+    <div id="mainData">
+        <div class="container">
+            <form role="form">
+                <h1>Friend Quiz</h1>
+                <h3>Name:</h3>
+                <input id="name" name="name" type="text" placeholder="enter your name">
+                <h3>Link to your picture</h3>
+                <input id="photo" name="photo" type="text" placeholder="link to your photo">
+                <h3>Question 1</h3>
+                <select id="q1">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question 2</h3>
+                <select id="q2">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question 3</h3>
+                <select id="q3">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question4</h3>
+                <select id="q4">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question 5</h3>
+                <select id="q5">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+
+                <h3>Question 6</h3>
+                <select id="q6">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question 7</h3>
+                <select id="q7">
+                      <option value="" selected>Select your answer</option>
+                      <option value="1">1 (strongly disagree)</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5 (strongly agree)</option>
+                    </select>
+
+                <h3>Question 8</h3>
+                <select id="q8">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question 9</h3>
+                <select id="q9">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <h3>Question10</h3>
+                <select id="q10">
+                <option value="" selected>Select your answer</option>
+                <option value="1">1 (strongly disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (strongly agree)</option>
+              </select>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-md" id="dobtn">Find Friend!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="goAgain" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-3">Would you like to take the quiz again?</h1>
+              <a href="/survey"><button type="button" class="btn btn-outline-primary btn-lg">Go to the survey</button></a>                      
+            </div>
+          </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="dataResults" class="text-center"></div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        $("#goAgain").hide();
+        $("#dobtn").on("click", function (event) {
+            event.preventDefault();
+            $("#goAgain").hide();
+            var scorvals = [];
+            scorvals.push($("#q1").val());
+            scorvals.push($("#q2").val());
+            scorvals.push($("#q3").val());
+            scorvals.push($("#q4").val());
+            scorvals.push($("#q5").val());
+            scorvals.push($("#q6").val());
+            scorvals.push($("#q7").val());
+            scorvals.push($("#q8").val());
+            scorvals.push($("#q9").val());
+            scorvals.push($("#q10").val());
+            var chkResults = {
+                name: $('#name').val().trim(),
+                image: $('#photo').val().trim(),
+                scores: scorvals
+            };
+            $.post("/api/new", chkResults)
+                .done(function (data) {
+                    console.log("data 0",data[0]);
+                    console.log("data 1",data[1]);
+                    console.log("data 2",data[2]);
+                    console.log("data 3",data[3]);
+                    $("#mainData").hide();
+                    $("#myModal").show();
+                    $("#dataResults").html('<h1 class="text-center">' + data[2] + ', here are your results... </h1>');
+                    $("#dataResults").append('<img src="' + data[3] + '" width="300"> is best matched with ');
+                    $("#dataResults").append('<span class="red">' + data[0] + '</span><img src="' + data[1] + '" width="300">');
+                    
+                    // Get the modal
+                    var modal = document.getElementById('myModal');
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function () {
+                        modal.style.display = "none";
+                        $("#goAgain").show();
+                    }
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                            $("#goAgain").show();
+                        }
+                    }
+                });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
