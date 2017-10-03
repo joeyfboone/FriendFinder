@@ -1,7 +1,7 @@
 const express = require("express");
-const path = require("path");
+var path = require("path");
 
-const app = express();
+var app = express();
 
 function showPage(app, __dirname) {
     app.get("/", function (req, res) {
@@ -10,6 +10,10 @@ function showPage(app, __dirname) {
 
     app.get("/survey", function (req, res) {
         res.sendFile(path.join(__dirname, "/app/public/survey.html"));
+    });
+
+    app.get("/results", function (req, res) {
+        res.sendFile(path.join(__dirname, "/app/public/results.html"));
     });
 
  // NEED TO create default for 404 error   
